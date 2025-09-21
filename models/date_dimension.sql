@@ -9,7 +9,7 @@ hour(to_timestamp(started_at)) as hour_started_at,
 
 {{get_season('STARTED_AT')}} as station_of_year
 
-from {{ source('demo', 'bike') }}
+from {{ ref('stg_bike') }}
 
 )
 
